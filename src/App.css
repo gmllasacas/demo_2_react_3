@@ -1,0 +1,13 @@
+.App {
+  text-align: center;
+}
+
+.tab_content {
+    min-height: 280px;
+    padding: 10px;
+    background-color: #fafafa;
+}
+
+header img {
+    height: 100%;
+}
