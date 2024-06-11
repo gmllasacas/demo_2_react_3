@@ -38,7 +38,7 @@ export default function App() {
 
     const fetchData = () => {
         setLoading(true);
-        fetch(`http://127.0.0.1:8000/api/departments`)
+        fetch(`${process.env.REACT_APP_BACKEND_HOST}/api/departments`)
         .then((res) => res.json())
         .then(({ data }) => {
             setData(data);
