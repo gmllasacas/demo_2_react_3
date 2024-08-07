@@ -38,8 +38,16 @@ export default function App() {
 
     const fetchData = () => {
         setLoading(true);
-        fetch(`${process.env.REACT_APP_BACKEND_HOST}/api/departments`)
-        .then((res) => res.json())
+        fetch(
+            `${process.env.REACT_APP_BACKEND_HOST}/api/departments`,
+            {
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/json',
+                    'Authorization': 'Bearer 3|gWAysDz0i6qYWHZ4Fh4WtnP9sPUqsbJ45LgZ6VBA',
+                },
+	        }
+        ).then((res) => res.json())
         .then(({ data }) => {
             setData(data);
             setLoading(false);
